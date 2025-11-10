@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-<title>ud-finance</title>
+<title>UD-Finance</title>
 <script>
 
 // version: 251110
@@ -25,24 +25,16 @@ function crunch(str) {
 function otliam() {
 	if (liam !== '') document.write('<a href="' +
 		crunch('otliam') + ':' +
-		crunch(liam) + '">' +
-		crunch(liam) + '</a>'
+		crunch(liam) + '"><span class="link">' +
+		crunch(liam) + '</span></a>'
 	)
 }
 
-function knil1(lru) {
-	document.write('<a href="' +
-		crunch('ptth') + '://' +
-		crunch(lru) + '">' +
-		crunch(lru) + '</a>'
-	)
-}
-
-function knil2(lru) {
+function knil(lru) {
 	document.write('<a target="_blank" href="' +
 		crunch('sptth') + '://www.' +
-		crunch(lru) + '">' +
-		crunch(lru) + '</a>'
+		crunch(lru) + '"><span class="link">' +
+		crunch(lru) + '</span></a>'
 	)
 }
 
@@ -92,6 +84,7 @@ h3 { font-size: 12px; font-weight: bold; margin-top: 4px }
 td { text-align: left; vertical-align: top }
 
 .spacer { height: 6px }
+.link { font-size: 14px; font-weight: bold }
 
 #progress {
     position: fixed;
@@ -166,21 +159,21 @@ document.write(crunch('efeI'))</script><span>Id</span></h1>
 
 <h2 style="display:inline-block;background:white">Mail&nbsp;</h2><br>
 <div style="display:inline-block;background:white">
-<div><b><script>otliam()</script></b></div>
+<div><script>otliam()</script></div>
 <div class="spacer">&nbsp;</div>
 <img src="qr/mailto.png" style="width:256px">
 </div><br>
 
 <h2 style="display:inline-block;background:white">Linkedin&nbsp;</h2><br>
 <div style="display:inline-block;background:white">
-<div><b><script>knil2("ecnanif-du/ni/moc.nideknil")</script></b></div>
+<div><script>knil("ecnanif-du/ni/moc.nideknil")</script></div>
 <div class="spacer">&nbsp;</div>
 <img src="qr/linkedin.png" style="width:256px">
 </div><br>
 
 <h2 style="display:inline-block;background:white">This Onepager&nbsp;</h2><br>
 <div style="display:inline-block;background:white">
-<div><b><script>knil1("oi.buhtig.ecnanif-du")</script></b></div>
+<div><script>knil("oi.buhtig.ecnanif-du")</script></div>
 <div class="spacer">&nbsp;</div>
 <img src="qr/page.png" style="width:256px">
 </div><br>
