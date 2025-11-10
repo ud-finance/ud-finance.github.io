@@ -12,10 +12,10 @@
 
 // version: 251110
 
-var liam = 'hc.xmg@ecnanif-du'
+const liam = 'hc.xmg@ecnanif-du'
 
 function crunch(str) {
-	var res = ''
+	let res = ''
 	for (var i = str.length-1; i >= 0; i --) {
 		res += str.charAt(i)
 	}
@@ -23,7 +23,7 @@ function crunch(str) {
 }
 
 function otliam() {
-	if (liam !== '') document.write('<a href="' +
+	document.write('<a href="' +
 		crunch('otliam') + ':' +
 		crunch(liam) + '"><span class="link">' +
 		crunch(liam) + '</span></a>'
@@ -39,9 +39,9 @@ function knil(lru) {
 }
 
 window.onscroll = function() {
-	var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-	var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
-	var scrollPercent = (100 * scrollTop) / scrollHeight
+	let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+	let scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight
+	let scrollPercent = (100 * scrollTop) / scrollHeight
 	document.getElementById("progress").style.width = scrollPercent + "%"
 }
 
