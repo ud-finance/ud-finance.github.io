@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="de">
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="google" value="notranslate">
+<meta charset="UTF-8">
+<meta name="google" content="notranslate">
 <meta name="HandheldFriendly" content="true">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#000000">
+<link rel="icon" type="image/x-icon" href="./favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+<link rel="manifest" href="./manifest.webmanifest">
 <title>ud-finance</title>
 <script>
 
-// version: 260707
-
+const version = 260729
 const liam = 'hc.xmg@ecnanif-du'
 
 function crunch(str) {
@@ -44,6 +45,20 @@ window.onscroll = function() {
 	let scrollPercent = (100 * scrollTop) / scrollHeight
 	document.getElementById("progress").style.width = scrollPercent + "%"
 }
+
+window.addEventListener('load', () => {
+	console.log('version:', version)
+
+	document.getElementById("version").title = version
+
+	// scrollDown()
+
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('./service-worker.js').catch((err) => {
+			console.error('Service-Worker-Registrierung fehlgeschlagen:', err)
+		})
+	}
+})
 
 </script>
 <style type="text/css">
@@ -99,20 +114,19 @@ td { text-align: left; vertical-align: top }
 </style>
 </head>
 <body>
-
-<div style="background:white">
-
 <div id="progress"></div>
+<div id="version" style="position:fixed;top:0;left:0">&nbsp;&nbsp;&nbsp;</div>
+<div style="background:white">
 
 <a href="javascript:scrollTo(0,0)">
 <div style="position:fixed;top:0;right:0;width:64px;height:64px"></div>
 </a>
 
-<div><img src="zoom.jpg" style="width:100%;height:128px"></div>
+<div><img src="./zoom.jpg" style="width:100%;height:128px"></div>
 
 <div style="margin-top:-100px;margin-left:8%">
 
-<img src="portrait/1.jpg"><img src="portrait/2.jpg"><img src="portrait/3.jpg">
+<img src="./portrait/1.jpg"><img src="./portrait/2.jpg"><img src="./portrait/3.jpg">
 
 <h1>UIr<script>
 document.write(crunch('hci'))</script><span>&nbsp;D&omicron;eI</span><script>
@@ -120,26 +134,26 @@ document.write(crunch('efeI'))</script><span>Id</span></h1>
 
 <h2>Profile</h2>
 <h3>Blockchain&nbsp;Enthusiast •&nbsp;since&nbsp;2011</h3>
-<div>DLT, Web3, Solidity, Truffle, ...</div>
+<div>Research in Monetary Economics</div>
 <h3>Quantitative&nbsp;Analyst •&nbsp;25+&nbsp;yrs</h3>
-<div style="font-size:10px">R&amp;D of Quantitative Modelling and Trading Systems</div>
+<div style="font-size:11px">R&amp;D of Quantitative Modelling and Trading Systems</div>
 <h3>Senior&nbsp;IT&nbsp;Developer •&nbsp;35+&nbsp;yrs</h3>
-<div style="font-size:11px">NodeJS, TypeScript, R, MatLab, Java, C++, ...</div>
+<div>NodeJS, TypeScript, R, MatLab, Java, C++, ...</div>
 
 <h2>Experience</h2>
 <h3>DLT Developer</h3>
 <div>Web3, Ethereum, Solidity, Truffle, ...</div>
-<div>Jul 2014 - <span style="color:blue">Present</span></div>
+<div>Jul 2014 - Dec 2017 •&nbsp;3 yrs</div>
 <h3>B<script>document.write(crunch('cti'))</script>&oslash;in Developer</h3>
-<div>Apr 2011 - <span style="color:blue">Present</span></div>
+<div>Apr 2011 - Oct 2025 •&nbsp;14 yrs</div>
 <h3>Trader and Analyst</h3>
 <div>Dec 2007 - <span style="color:blue">Present</span></div>
 <h3>Managed Futures</h3>
-<div>Dec 2006 - Nov 2007 •&nbsp;9 mos</div>
+<div>Dec 2006 - Nov 2007 •&nbsp;1 yr</div>
 <h3>Quantitative Analyst</h3>
 <div>Jun 2000 - <span style="color:blue">Present</span></div>
 <h3>Systems Analyst</h3>
-<div>Jul 1987 - May 2000 •&nbsp;12 yrs 11 mos</div>
+<div>Jul 1987 - May 2000 •&nbsp;13 yrs</div>
 <h3>IT Developer</h3>
 <div>Freelance</div>
 <div>Jul 1987 - <span style="color:blue">Present</span></div>
@@ -161,27 +175,24 @@ document.write(crunch('efeI'))</script><span>Id</span></h1>
 <div style="display:inline-block;background:white">
 <div><script>otliam()</script></div>
 <div class="spacer">&nbsp;</div>
-<img src="qr/mailto.png" style="width:256px">
+<img src="./qr/mailto.png" style="width:256px">
 </div><br>
 
 <h2 style="display:inline-block;background:white">Linkedin&nbsp;</h2><br>
 <div style="display:inline-block;background:white">
 <div><script>knil("ecnanif-du/ni/moc.nideknil")</script></div>
 <div class="spacer">&nbsp;</div>
-<img src="qr/linkedin.jpg" style="width:256px">
+<img src="./qr/linkedin.jpg" style="width:256px">
 </div><br>
 
 <h2 style="display:inline-block;background:white">This Onepager&nbsp;</h2><br>
 <div style="display:inline-block;background:white">
 <div><script>knil("oi.buhtig.ecnanif-du")</script></div>
 <div class="spacer">&nbsp;</div>
-<img src="qr/page.png" style="width:256px">
+<img src="./qr/page.png" style="width:256px">
 </div><br>
 
-<div class="spacer">&nbsp;</div>
-<div class="spacer">&nbsp;</div>
-<div class="spacer">&nbsp;</div>
-<div class="spacer">&nbsp;</div>
+<div style="height:42px">&nbsp;</div>
 
 </div>
 
