@@ -1,4 +1,4 @@
-const CACHE_NAME = '260803_ud-finance';
+const CACHE_NAME = '260813_ud-finance'
 const OFFLINE_URLS = [
   './',
   './index.html',
@@ -11,14 +11,14 @@ const OFFLINE_URLS = [
   './portrait/1.jpg',
   './portrait/2.jpg',
   './portrait/3.jpg'
-];
+]
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(OFFLINE_URLS))
   );
   self.skipWaiting();
-});
+})
 
 self.addEventListener('activate', (event) => {
   event.waitUntil(
@@ -27,7 +27,7 @@ self.addEventListener('activate', (event) => {
     ))
   );
   self.clients.claim();
-});
+})
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
@@ -46,4 +46,4 @@ self.addEventListener('fetch', (event) => {
       }).catch(() => caches.match('./index.html'));
     })
   );
-});
+})
