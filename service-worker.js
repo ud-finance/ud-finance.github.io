@@ -1,4 +1,4 @@
-const CACHE_NAME = '261002' + 'ud-finance'
+const CACHE_NAME = '261002-2' + 'ud-finance'
 const OFFLINE_URLS = [
   './',
   './index.html',
